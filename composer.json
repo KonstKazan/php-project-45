@@ -5,11 +5,16 @@
             "Hexlet\\Code\\": "src/"
         }
     },
+    "description": "php-project-45",
     "authors": [
         {
             "name": "Konstantin",
             "email": "konst.kazan@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "license": "MIT",
+    "bin": [
+        "bin/brain-games"
+      ]
 }
