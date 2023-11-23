@@ -3,7 +3,10 @@
     "autoload": {
         "psr-4": {
             "Hexlet\\Code\\": "src/"
-        }
+        },
+        "files": [
+            "src/Cli.php"
+        ]
     },
     "description": "php-project-45",
     "authors": [
@@ -12,7 +15,9 @@
             "email": "konst.kazan@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "wp-cli/php-cli-tools": "^0.11.21"
+    },
     "license": "MIT",
     "bin": [
         "bin/brain-games"
