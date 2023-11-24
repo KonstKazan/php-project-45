@@ -15,15 +15,23 @@ if (file_exists($autoloadPath1)) {
 greetings();
 tutorial('Answer "yes" if the number is even, otherwise answer "no".');
 
+$wrongYes = "'yes' is wrong answer ;(. Correct answer was 'no'.";
+$wrongNo = "'no' is wrong answer ;(. Correct answer was 'yes'.";
+
 for($i = 0; $i < 3; ) {
     $num = rand(1, 99);
     $answer = round($num);
     if (($num % 2 === 0) && ($answer === 'yes')) {
         $i++;
         correct();
-    } elseif (($num % 2 !== 0) && ($answer === 'no')) {
+    } elseif (($num % 2 === 0) && ($answer !== 'yes')) {
+        return wrong($wrongNo);
+    }
+    if (($num % 2 !== 0) && ($answer === 'no')) {
         $i++;
         correct();
+    } elseif (($num % 2 !== 0) && ($answer !== 'no')) {
+        return wrong($wrongYes);
     }
 }
 
