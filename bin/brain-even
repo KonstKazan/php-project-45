@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-namespace Php\Project\Engine;
+use function Php\Project\Engine\runGame;
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
 $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -12,27 +12,4 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-greetings();
-tutorial('Answer "yes" if the number is even, otherwise answer "no".');
-
-$wrongYes = "is wrong answer ;(. Correct answer was 'no'.";
-$wrongNo = "is wrong answer ;(. Correct answer was 'yes'.";
-
-for($i = 0; $i < 3; ) {
-    $num = rand(1, 99);
-    $answer = round($num);
-    if (($num % 2 === 0) && ($answer === 'yes')) {
-        $i++;
-        correct();
-    } elseif (($num % 2 === 0) && ($answer !== 'yes')) {
-        return wrong($answer, $wrongNo);
-    }
-    if (($num % 2 !== 0) && ($answer === 'no')) {
-        $i++;
-        correct();
-    } elseif (($num % 2 !== 0) && ($answer !== 'no')) {
-        return wrong($answer, $wrongYes);
-    }
-}
-
-congratulations();
+runGame('even');

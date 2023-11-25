@@ -6,7 +6,8 @@
         },
         "files": [
             "src/Cli.php",
-            "src/engine.php"
+            "src/engine.php",
+            "src/Games/even-logic.php"
         ]
     },
     "description": "php-project-45",
