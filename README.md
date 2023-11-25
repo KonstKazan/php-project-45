@@ -3,3 +3,6 @@
 
 Example of brain-even
 https://asciinema.org/a/mGF8dPLssoZSTRpPYLYwaILDx
+
+Example of brain-calc
+https://asciinema.org/a/kIx1wSIFH06d49JidKY5YRWNe
