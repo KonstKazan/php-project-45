@@ -30,10 +30,10 @@ function correct()
     line('Correct!');
 }
 
-function wrong($wrong)
+function wrong($answer, $wrong)
 {
     global $name;
-    line($wrong);
+    line("'{$answer}' {$wrong}");
     line("Let's try again, {$name}!");
 }
 
