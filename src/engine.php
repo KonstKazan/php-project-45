@@ -4,7 +4,6 @@ namespace Php\Project\Engine;
 
 use function cli\line;
 use function cli\prompt;
-use function Php\Project\BrainEven\brainEven;
 
 function defineGame($game)
 {
@@ -14,6 +13,10 @@ function defineGame($game)
         case 'even':
             $tutorial = 'Answer "yes" if the number is even, otherwise answer "no".';
             $gameLogic = "Php\Project\BrainEven\brainEven";
+            break;
+        case 'calc':
+            $tutorial = 'What is the result of the expression?';
+            $gameLogic = "Php\Project\BrainCalc\brainCalc";
     }
     return [$tutorial, $gameLogic];
 }
@@ -29,14 +32,14 @@ function runGame($game)
         [$question, $correctAnswer] = $gameLogic();
         line("Question: %s", $question);
         $answer = prompt('Your answer: ');
-        if ($answer === $correctAnswer) {
+        if ($answer == $correctAnswer) {
             $i++;
             line('Correct!');
         } else {
             line("'%s' is wrong answer ;(. Correct answer was '%s'", $answer, $correctAnswer);
             line("Let's try again, %s!", $name);
-            break;
+            return;
         }
-        line("Congratulations, %s!", $name);
     }
+    line("Congratulations, %s!", $name);
 }
