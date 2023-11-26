@@ -38,7 +38,7 @@ function defineGame($game)
 function runGame($game)
 {
     [$tutorial, $gameLogic] = defineGame($game);
-    line('Welcome to the Brain Game!');
+    line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     line($tutorial);
