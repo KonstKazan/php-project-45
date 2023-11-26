@@ -4,6 +4,7 @@ namespace Php\Project\Engine;
 
 use function cli\line;
 use function cli\prompt;
+use function Php\Project\BrainGcd\brainGcd;
 
 function defineGame($game)
 {
@@ -17,6 +18,11 @@ function defineGame($game)
         case 'calc':
             $tutorial = 'What is the result of the expression?';
             $gameLogic = "Php\Project\BrainCalc\brainCalc";
+            break;
+        case 'gcd':
+            $tutorial = 'Find the greatest common divisor of given numbers.';
+            $gameLogic = "Php\Project\BrainGcd\brainGcd";
+            break;
     }
     return [$tutorial, $gameLogic];
 }
