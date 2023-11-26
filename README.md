@@ -13,4 +13,8 @@ https://asciinema.org/a/t3FFQwell1uX6Q4KRu6UAiWDq
 Example of brain-progression
 https://asciinema.org/a/VSKVVKbxNowYN6T4oWGh2x39x
 
+Example of brain-prime
+https://asciinema.org/a/Q4n336KV81iuQjc2ngauG31NW
+
+
 

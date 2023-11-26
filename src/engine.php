@@ -27,6 +27,10 @@ function defineGame($game)
             $tutorial = 'What number is missing in the progression?';
             $gameLogic = "Php\Project\BrainProgression\brainProgression";
             break;
+        case 'prime':
+            $tutorial = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+            $gameLogic = "Php\Project\BrainPrime\brainPrime";
+            break;  
     }
     return [$tutorial, $gameLogic];
 }

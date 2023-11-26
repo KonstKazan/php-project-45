@@ -10,7 +10,8 @@
             "src/Games/even-logic.php",
             "src/Games/calc-logic.php",
             "src/Games/gcd-logic.php",
-            "src/Games/progression-logic.php"
+            "src/Games/progression-logic.php",
+            "src/Games/prime-logic.php"
         ]
     },
     "description": "php-project-45",
@@ -29,7 +30,8 @@
         "bin/brain-even",
         "bin/brain-calc",
         "bin/brain-gcd",
-        "bin/brain-progression"
+        "bin/brain-progression",
+        "bin/brain-prime"
       ],
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.7"
