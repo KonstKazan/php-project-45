@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 use function Php\Project\BrainGcd\brainGcd;
 
-function defineGame($game)
+function defineGame(string $game)
 {
     $tutorial = '';
     $gameLogic = '';
@@ -35,7 +35,7 @@ function defineGame($game)
     return [$tutorial, $gameLogic];
 }
 
-function runGame($game)
+function runGame(string $game)
 {
     [$tutorial, $gameLogic] = defineGame($game);
     line('Welcome to the Brain Games!');

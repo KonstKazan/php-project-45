@@ -2,7 +2,7 @@
 
 namespace Php\Project\BrainGcd;
 
-function gcd($n, $m)
+function gcd(int $n, int $m)
 {
     while (true) {
         if ($n == $m) {

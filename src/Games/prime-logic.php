@@ -2,7 +2,7 @@
 
 namespace Php\Project\BrainPrime;
 
-function primeCheck($number)
+function primeCheck(int $number)
 {
     if ($number == 1) {
         return 'yes';
