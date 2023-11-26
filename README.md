@@ -10,3 +10,7 @@ https://asciinema.org/a/kIx1wSIFH06d49JidKY5YRWNe
 Example of brain-gcd
 https://asciinema.org/a/t3FFQwell1uX6Q4KRu6UAiWDq
 
+Example of brain-progression
+https://asciinema.org/a/VSKVVKbxNowYN6T4oWGh2x39x
+
+

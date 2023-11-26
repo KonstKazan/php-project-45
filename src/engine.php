@@ -23,6 +23,10 @@ function defineGame($game)
             $tutorial = 'Find the greatest common divisor of given numbers.';
             $gameLogic = "Php\Project\BrainGcd\brainGcd";
             break;
+        case 'progression':
+            $tutorial = 'What number is missing in the progression?';
+            $gameLogic = "Php\Project\BrainProgression\brainProgression";
+            break;
     }
     return [$tutorial, $gameLogic];
 }
