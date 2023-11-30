@@ -19,7 +19,7 @@ $ make install
 ```sh
 $ make brain-even
 ```
-### Example of Brain-Even  
+#### Example of Brain-Even #  
 [gameplay](https://asciinema.org/a/mGF8dPLssoZSTRpPYLYwaILDx)
 
 
@@ -27,7 +27,7 @@ $ make brain-even
 ```sh
 $ make brain-calc
 ```
-### Example of Brain-Calc  
+#### Example of Brain-Calc #  
 [gameplay](https://asciinema.org/a/kIx1wSIFH06d49JidKY5YRWNe)
 
 
@@ -35,7 +35,7 @@ $ make brain-calc
 ```sh
 $ make brain-gcd
 ```
-### Example of Brain-Gcd  
+#### Example of Brain-Gcd #  
 [gameplay](https://asciinema.org/a/t3FFQwell1uX6Q4KRu6UAiWDq)
 
 
@@ -43,7 +43,7 @@ $ make brain-gcd
 ```sh
 $ make brain-progression
 ```
-## Example of Brain-Progression  
+#### Example of Brain-Progression #  
 [gameplay](https://asciinema.org/a/VSKVVKbxNowYN6T4oWGh2x39x)
 
 
@@ -51,7 +51,7 @@ $ make brain-progression
 ```sh
 $ make brain-prime
 ```
-## Example of Brain-Prime  
+#### Example of Brain-Prime #  
 [gameplay](https://asciinema.org/a/Q4n336KV81iuQjc2ngauG31NW)
 
 
