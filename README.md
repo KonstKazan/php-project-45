@@ -1,6 +1,11 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/KonstKazan/php-project-45/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/KonstKazan/php-project-45/actions)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/34bcc16504e3e72e51cc/maintainability)](https://codeclimate.com/github/KonstKazan/php-project-45/maintainability)  
+
+
+#### A set of several educational console games #
+
 ## Setup
 ```sh
 $ git clone https://github.com/KonstKazan/php-project-45.git
