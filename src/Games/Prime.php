@@ -2,6 +2,9 @@
 
 namespace App\Games\BrainPrime;
 
+define("NUM_RAND_BEGIN_PRIME", 1);
+define("NUM_RAND_END_PRIME", 3001);
+
 function primeCheck(int $number)
 {
     if ($number == 1) {
@@ -17,9 +20,7 @@ function primeCheck(int $number)
 
 function BrainPrime()
 {
-    define("NUM_RAND_BEGIN", 1);
-    define("NUM_RAND_END", 3001);
-    $num = rand(NUM_RAND_BEGIN, NUM_RAND_END);
+    $num = rand(NUM_RAND_BEGIN_PRIME, NUM_RAND_END_PRIME);
     $question = $num;
     $correctAnswer = primeCheck($num);
     return [$question, $correctAnswer];

@@ -2,6 +2,9 @@
 
 namespace App\Games\BrainGcd;
 
+define("NUM_RAND_BEGIN_GCD", 1);
+define("NUM_RAND_END_GCD", 99);
+
 function gcd(int $n, int $m)
 {
     while (true) {
@@ -18,10 +21,8 @@ function gcd(int $n, int $m)
 
 function brainGcd()
 {
-    define("NUM_RAND_BEGIN", 1);
-    define("NUM_RAND_END", 99);
-    $numOne = rand(NUM_RAND_BEGIN, NUM_RAND_END);
-    $numTwo = rand(NUM_RAND_BEGIN, NUM_RAND_END);
+    $numOne = rand(NUM_RAND_BEGIN_GCD, NUM_RAND_END_GCD);
+    $numTwo = rand(NUM_RAND_BEGIN_GCD, NUM_RAND_END_GCD);
     $question = "{$numOne} {$numTwo}";
     $correctAnswer = gcd($numOne, $numTwo);
     return [$question, $correctAnswer];

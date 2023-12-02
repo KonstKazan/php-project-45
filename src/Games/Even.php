@@ -2,11 +2,12 @@
 
 namespace App\Games\BrainEven;
 
+define("NUM_RAND_BEGIN_EVEN", 1);
+define("NUM_RAND_END_EVEN", 100);
+
 function brainEven()
 {
-    define("NUM_RAND_BEGIN", 1);
-    define("NUM_RAND_END", 100);
-    $question = rand(NUM_RAND_BEGIN, NUM_RAND_END);
+    $question = rand(NUM_RAND_BEGIN_EVEN, NUM_RAND_END_EVEN);
     $correctAnswer = $question % 2 === 0 ? 'yes' : 'no';
     return [$question, $correctAnswer];
 }

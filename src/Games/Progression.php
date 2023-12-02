@@ -2,18 +2,19 @@
 
 namespace App\Games\BrainProgression;
 
+define("NUM_RAND_BEGIN_PROG", 1);
+define("NUM_RAND_END_PROG", 40);
+define("INC_RAND_BEGIN_PROG", 1);
+define("INC_RAND_END_PROG", 5);
+define("LEN_RAND_BEGIN_PROG", 5);
+define("LEN_RAND_END_PROG", 10);
+
 function BrainProgression()
 {
-    define("NUM_RAND_BEGIN", 1);
-    define("NUM_RAND_END", 40);
-    define("INC_RAND_BEGIN", 1);
-    define("INC_RAND_END", 5);
-    define("LEN_RAND_BEGIN", 5);
-    define("LEN_RAND_END", 10);
-    $numStart = rand(NUM_RAND_BEGIN, NUM_RAND_END);
-    $increment = rand(INC_RAND_BEGIN, INC_RAND_END);
+    $numStart = rand(NUM_RAND_BEGIN_PROG, NUM_RAND_END_PROG);
+    $increment = rand(INC_RAND_BEGIN_PROG, INC_RAND_END_PROG);
     $arr = [];
-    $lenght = rand(LEN_RAND_BEGIN, LEN_RAND_END);
+    $lenght = rand(LEN_RAND_BEGIN_PROG, LEN_RAND_END_PROG);
     for ($i = 1; $i <= $lenght; $i++) {
         $arr[] = $numStart += $increment;
     }
