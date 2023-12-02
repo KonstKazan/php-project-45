@@ -1,6 +1,6 @@
 <?php
 
-namespace Php\Project\BrainGcd;
+namespace App\Games\BrainGcd;
 
 function gcd(int $n, int $m)
 {
@@ -18,8 +18,10 @@ function gcd(int $n, int $m)
 
 function brainGcd()
 {
-    $numOne = rand(1, 99);
-    $numTwo = rand(1, 99);
+    define("NUM_RAND_BEGIN", 1);
+    define("NUM_RAND_END", 99);
+    $numOne = rand(NUM_RAND_BEGIN, NUM_RAND_END);
+    $numTwo = rand(NUM_RAND_BEGIN, NUM_RAND_END);
     $question = "{$numOne} {$numTwo}";
     $correctAnswer = gcd($numOne, $numTwo);
     return [$question, $correctAnswer];

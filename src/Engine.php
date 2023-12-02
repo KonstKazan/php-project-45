@@ -1,10 +1,9 @@
 <?php
 
-namespace Php\Project\Engine;
+namespace App\Src\Engine;
 
 use function cli\line;
 use function cli\prompt;
-use function Php\Project\BrainGcd\brainGcd;
 
 function defineGame(string $game)
 {
@@ -13,23 +12,23 @@ function defineGame(string $game)
     switch ($game) {
         case 'even':
             $tutorial = 'Answer "yes" if the number is even, otherwise answer "no".';
-            $gameLogic = "Php\Project\BrainEven\brainEven";
+            $gameLogic = "App\Games\BrainEven\brainEven";
             break;
         case 'calc':
             $tutorial = 'What is the result of the expression?';
-            $gameLogic = "Php\Project\BrainCalc\brainCalc";
+            $gameLogic = "App\Games\BrainCalc\brainCalc";
             break;
         case 'gcd':
             $tutorial = 'Find the greatest common divisor of given numbers.';
-            $gameLogic = "Php\Project\BrainGcd\brainGcd";
+            $gameLogic = "App\Games\BrainGcd\brainGcd";
             break;
         case 'progression':
             $tutorial = 'What number is missing in the progression?';
-            $gameLogic = "Php\Project\BrainProgression\brainProgression";
+            $gameLogic = "App\Games\BrainProgression\brainProgression";
             break;
         case 'prime':
             $tutorial = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-            $gameLogic = "Php\Project\BrainPrime\brainPrime";
+            $gameLogic = "App\Games\BrainPrime\brainPrime";
             break;
     }
     return [$tutorial, $gameLogic];

@@ -1,12 +1,16 @@
 <?php
 
-namespace Php\Project\BrainCalc;
+namespace App\Games\BrainCalc;
 
 function brainCalc()
 {
-    $operation = rand(1, 3);
-    $numOne = rand(1, 99);
-    $numTwo = rand(1, 99);
+    define("OP_RAND_BEGIN", 1);
+    define("OP_RAND_END", 3);
+    define("NUM_RAND_BEGIN", 0);
+    define("NUM_RAND_END", 20);
+    $operation = rand(OP_RAND_BEGIN, OP_RAND_END);
+    $numOne = rand(NUM_RAND_BEGIN, NUM_RAND_END);
+    $numTwo = rand(NUM_RAND_BEGIN, NUM_RAND_END);
     switch ($operation) {
         case 1:
             $question = "{$numOne} + {$numTwo}";

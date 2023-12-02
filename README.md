@@ -4,7 +4,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/34bcc16504e3e72e51cc/maintainability)](https://codeclimate.com/github/KonstKazan/php-project-45/maintainability)  
 
 
-#### A set of several educational console games #
+#### A set of several educational console games  
 
 ## Setup
 ```sh
@@ -13,7 +13,7 @@ $ cd php-project-45
 $ make install
 ```
 
-## Game launch
+# Game launch
 
 ## Brain-Even Game
 ```sh

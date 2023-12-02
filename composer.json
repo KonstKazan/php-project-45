@@ -1,17 +1,14 @@
 {
     "name": "hexlet/code",
     "autoload": {
-        "psr-4": {
-            "Hexlet\\Code\\": "src/"
-        },
         "files": [
             "src/Cli.php",
-            "src/engine.php",
-            "src/Games/even-logic.php",
-            "src/Games/calc-logic.php",
-            "src/Games/gcd-logic.php",
-            "src/Games/progression-logic.php",
-            "src/Games/prime-logic.php"
+            "src/Engine.php",
+            "src/Games/Even.php",
+            "src/Games/Calc.php",
+            "src/Games/Gcd.php",
+            "src/Games/Progression.php",
+            "src/Games/Prime.php"
         ]
     },
     "description": "php-project-45",

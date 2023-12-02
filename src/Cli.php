@@ -1,6 +1,6 @@
 <?php
 
-namespace Php\Project\Cli;
+namespace App\Src\Cli;
 
 use function cli\line;
 use function cli\prompt;
