@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Src\Engine;
+namespace App\Engine;
 
 use function cli\line;
 use function cli\prompt;
+
+const NUMBER_OF_ROUNDS = 3;
 
 function defineGame(string $game)
 {
@@ -30,6 +32,9 @@ function defineGame(string $game)
             $tutorial = 'Answer "yes" if given number is prime. Otherwise answer "no".';
             $gameLogic = "App\Games\BrainPrime\brainPrime";
             break;
+        default:
+            exit("Sorry, we haven't come up with a game with that name yet. Come back next time :(");
+            break;
     }
     return [$tutorial, $gameLogic];
 }
@@ -41,7 +46,7 @@ function runGame(string $game)
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     line($tutorial);
-    for ($i = 0; $i < 3;) {
+    for ($i = 0; $i < NUMBER_OF_ROUNDS;) {
         [$question, $correctAnswer] = $gameLogic();
         line("Question: %s", $question);
         $answer = prompt('Your answer: ');

@@ -2,8 +2,8 @@
 
 namespace App\Games\BrainGcd;
 
-define("NUM_RAND_BEGIN_GCD", 1);
-define("NUM_RAND_END_GCD", 99);
+const NUM_RAND_BEGIN_GCD = 1;
+const NUM_RAND_END_GCD = 99;
 
 function gcd(int $n, int $m)
 {

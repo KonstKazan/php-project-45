@@ -1,8 +1,8 @@
 #!/usr/bin/env php
 <?php
 
-use function App\Src\Engine\runGame;
+use function App\Engine\runGame;
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../src/Require-autoload.php';
 
 runGame('prime');

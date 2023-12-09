@@ -2,8 +2,8 @@
 
 namespace App\Games\BrainPrime;
 
-define("NUM_RAND_BEGIN_PRIME", 1);
-define("NUM_RAND_END_PRIME", 3001);
+const NUM_RAND_BEGIN_PRIME = 1;
+const NUM_RAND_END_PRIME = 3001;
 
 function primeCheck(int $number)
 {

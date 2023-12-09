@@ -2,8 +2,8 @@
 
 namespace App\Games\BrainEven;
 
-define("NUM_RAND_BEGIN_EVEN", 1);
-define("NUM_RAND_END_EVEN", 100);
+const NUM_RAND_BEGIN_EVEN = 1;
+const NUM_RAND_END_EVEN = 100;
 
 function brainEven()
 {

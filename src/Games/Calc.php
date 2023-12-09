@@ -2,28 +2,32 @@
 
 namespace App\Games\BrainCalc;
 
-define("OP_RAND_BEGIN_CALC", 1);
-define("OP_RAND_END_CALC", 3);
-define("NUM_RAND_BEGIN_CALC", 0);
-define("NUM_RAND_END_CALC", 20);
+const NUM_RAND_BEGIN_CALC = 0;
+const NUM_RAND_END_CALC = 20;
 
 function brainCalc()
 {
-    $operation = rand(OP_RAND_BEGIN_CALC, OP_RAND_END_CALC);
+    $operators = ['+', '-', '*'];
+    $randOperator = array_rand($operators);
+    $operation = $operators[$randOperator];
     $numOne = rand(NUM_RAND_BEGIN_CALC, NUM_RAND_END_CALC);
     $numTwo = rand(NUM_RAND_BEGIN_CALC, NUM_RAND_END_CALC);
     switch ($operation) {
-        case 1:
+        case '+':
             $question = "{$numOne} + {$numTwo}";
             $correctAnswer = ($numOne + $numTwo);
             break;
-        case 2:
+        case '-':
             $question = "{$numOne} - {$numTwo}";
             $correctAnswer = ($numOne - $numTwo);
             break;
-        case 3:
+        case '*':
             $question = "{$numOne} * {$numTwo}";
             $correctAnswer = ($numOne * $numTwo);
+            break;
+        default:
+            exit('
+            Sorry, an unexpected error has occurred');
             break;
     }
     return [$question, $correctAnswer];

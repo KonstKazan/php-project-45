@@ -2,12 +2,12 @@
 
 namespace App\Games\BrainProgression;
 
-define("NUM_RAND_BEGIN_PROG", 1);
-define("NUM_RAND_END_PROG", 40);
-define("INC_RAND_BEGIN_PROG", 1);
-define("INC_RAND_END_PROG", 5);
-define("LEN_RAND_BEGIN_PROG", 5);
-define("LEN_RAND_END_PROG", 10);
+const NUM_RAND_BEGIN_PROG = 1;
+const NUM_RAND_END_PROG = 40;
+const INC_RAND_BEGIN_PROG = 1;
+const INC_RAND_END_PROG = 5;
+const LEN_RAND_BEGIN_PROG = 5;
+const LEN_RAND_END_PROG = 10;
 
 function BrainProgression()
 {

@@ -1,8 +1,8 @@
 #!/usr/bin/env php
 <?php
 
-namespace App\Src\Cli;
+namespace App\Cli;
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../src/Require-autoload.php';
 
 greetings();
