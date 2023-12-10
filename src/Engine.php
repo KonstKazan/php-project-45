@@ -34,7 +34,6 @@ function defineGame(string $game)
             break;
         default:
             exit("Sorry, we haven't come up with a game with that name yet. Come back next time :(");
-            break;
     }
     return [$tutorial, $gameLogic];
 }

@@ -26,9 +26,7 @@ function brainCalc()
             $correctAnswer = ($numOne * $numTwo);
             break;
         default:
-            exit('
-            Sorry, an unexpected error has occurred');
-            break;
+            exit('Sorry, an unexpected error has occurred');
     }
     return [$question, $correctAnswer];
 }
