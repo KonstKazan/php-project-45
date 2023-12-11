@@ -1,8 +1,8 @@
 #!/usr/bin/env php
 <?php
 
-use function App\Engine\runGame;
+use function App\Games\BrainCalc\runBrainCalc;
 
 require_once __DIR__ . '/../src/Require-autoload.php';
 
-runGame('calc');
+runBrainCalc();

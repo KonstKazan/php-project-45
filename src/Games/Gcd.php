@@ -2,8 +2,17 @@
 
 namespace App\Games\BrainGcd;
 
+use function App\Engine\runGame;
+
 const NUM_RAND_BEGIN_GCD = 1;
 const NUM_RAND_END_GCD = 99;
+
+function runGcd()
+{
+    $tutorial = 'Find the greatest common divisor of given numbers.';
+    $gameLogic = "App\Games\BrainGcd\brainGcd";
+    runGame($tutorial, $gameLogic);
+}
 
 function gcd(int $n, int $m)
 {

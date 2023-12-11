@@ -2,8 +2,17 @@
 
 namespace App\Games\BrainPrime;
 
+use function App\Engine\runGame;
+
 const NUM_RAND_BEGIN_PRIME = 1;
 const NUM_RAND_END_PRIME = 3001;
+
+function runPrimeCheck()
+{
+    $tutorial = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    $gameLogic = "App\Games\BrainPrime\brainPrime";
+    runGame($tutorial, $gameLogic);
+}
 
 function primeCheck(int $number)
 {

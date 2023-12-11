@@ -2,12 +2,21 @@
 
 namespace App\Games\BrainProgression;
 
+use function App\Engine\runGame;
+
 const NUM_RAND_BEGIN_PROG = 1;
 const NUM_RAND_END_PROG = 40;
 const INC_RAND_BEGIN_PROG = 1;
 const INC_RAND_END_PROG = 5;
 const LEN_RAND_BEGIN_PROG = 5;
 const LEN_RAND_END_PROG = 10;
+
+function runBrainProgression()
+{
+    $tutorial = 'What number is missing in the progression?';
+    $gameLogic = "App\Games\BrainProgression\brainProgression";
+    runGame($tutorial, $gameLogic);
+}
 
 function BrainProgression()
 {

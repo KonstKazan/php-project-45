@@ -2,8 +2,17 @@
 
 namespace App\Games\BrainCalc;
 
+use function App\Engine\runGame;
+
 const NUM_RAND_BEGIN_CALC = 0;
 const NUM_RAND_END_CALC = 20;
+
+function runBrainCalc()
+{
+    $tutorial = 'What is the result of the expression?';
+    $gameLogic = "App\Games\BrainCalc\brainCalc";
+    runGame($tutorial, $gameLogic);
+}
 
 function brainCalc()
 {
