@@ -4,8 +4,8 @@ namespace App\Games\BrainCalc;
 
 use function App\Engine\runGame;
 
-const NUM_RAND_BEGIN_CALC = 0;
-const NUM_RAND_END_CALC = 20;
+const MIN_NUMBER = 0;
+const MAX_NUMBER = 20;
 
 function runBrainCalc()
 {
@@ -19,20 +19,20 @@ function brainCalc()
     $operators = ['+', '-', '*'];
     $randOperator = array_rand($operators);
     $operation = $operators[$randOperator];
-    $numOne = rand(NUM_RAND_BEGIN_CALC, NUM_RAND_END_CALC);
-    $numTwo = rand(NUM_RAND_BEGIN_CALC, NUM_RAND_END_CALC);
+    $numOne = rand(MIN_NUMBER, MAX_NUMBER);
+    $numTwo = rand(MIN_NUMBER, MAX_NUMBER);
     switch ($operation) {
         case '+':
             $question = "{$numOne} + {$numTwo}";
-            $correctAnswer = ($numOne + $numTwo);
+            $correctAnswer = (string)($numOne + $numTwo);
             break;
         case '-':
             $question = "{$numOne} - {$numTwo}";
-            $correctAnswer = ($numOne - $numTwo);
+            $correctAnswer = (string)($numOne - $numTwo);
             break;
         case '*':
             $question = "{$numOne} * {$numTwo}";
-            $correctAnswer = ($numOne * $numTwo);
+            $correctAnswer = (string)($numOne * $numTwo);
             break;
         default:
             exit('Sorry, an unexpected error has occurred');

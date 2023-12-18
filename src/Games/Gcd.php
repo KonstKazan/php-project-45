@@ -4,8 +4,8 @@ namespace App\Games\BrainGcd;
 
 use function App\Engine\runGame;
 
-const NUM_RAND_BEGIN_GCD = 1;
-const NUM_RAND_END_GCD = 99;
+const MIN_NUMBER = 1;
+const MAX_NUMBER = 99;
 
 function runGcd()
 {
@@ -17,7 +17,7 @@ function runGcd()
 function gcd(int $n, int $m)
 {
     while (true) {
-        if ($n == $m) {
+        if ($n === $m) {
             return $m;
         }
         if ($n > $m) {
@@ -30,9 +30,9 @@ function gcd(int $n, int $m)
 
 function brainGcd()
 {
-    $numOne = rand(NUM_RAND_BEGIN_GCD, NUM_RAND_END_GCD);
-    $numTwo = rand(NUM_RAND_BEGIN_GCD, NUM_RAND_END_GCD);
+    $numOne = rand(MIN_NUMBER, MAX_NUMBER);
+    $numTwo = rand(MIN_NUMBER, MAX_NUMBER);
     $question = "{$numOne} {$numTwo}";
-    $correctAnswer = gcd($numOne, $numTwo);
+    $correctAnswer = (string)gcd($numOne, $numTwo);
     return [$question, $correctAnswer];
 }

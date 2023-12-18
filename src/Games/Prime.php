@@ -4,8 +4,8 @@ namespace App\Games\BrainPrime;
 
 use function App\Engine\runGame;
 
-const NUM_RAND_BEGIN_PRIME = 1;
-const NUM_RAND_END_PRIME = 3001;
+const MIN_NUMBER = 1;
+const MAX_NUMBER = 3001;
 
 function runPrimeCheck()
 {
@@ -16,11 +16,11 @@ function runPrimeCheck()
 
 function primeCheck(int $number)
 {
-    if ($number == 1) {
+    if ($number === 1) {
         return 'yes';
     }
     for ($i = 2; $i <= $number / 2; $i++) {
-        if ($number % $i == 0) {
+        if ($number % $i === 0) {
             return 'no';
         }
     }
@@ -29,7 +29,7 @@ function primeCheck(int $number)
 
 function BrainPrime()
 {
-    $num = rand(NUM_RAND_BEGIN_PRIME, NUM_RAND_END_PRIME);
+    $num = rand(MIN_NUMBER, MAX_NUMBER);
     $question = $num;
     $correctAnswer = primeCheck($num);
     return [$question, $correctAnswer];

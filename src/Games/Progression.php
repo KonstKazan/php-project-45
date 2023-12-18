@@ -4,12 +4,12 @@ namespace App\Games\BrainProgression;
 
 use function App\Engine\runGame;
 
-const NUM_RAND_BEGIN_PROG = 1;
-const NUM_RAND_END_PROG = 40;
-const INC_RAND_BEGIN_PROG = 1;
-const INC_RAND_END_PROG = 5;
-const LEN_RAND_BEGIN_PROG = 5;
-const LEN_RAND_END_PROG = 10;
+const PROGRESSION_MIN_NUMBER = 1;
+const PROGRESSION_MAX_NUMBER = 40;
+const PROGRESSION_MIN_STEP = 1;
+const PROGRESSION_MAX_STEP = 5;
+const PROGRESSION_MIN_LENGTH = 5;
+const PROGRESSION_MAX_LENGTH = 10;
 
 function runBrainProgression()
 {
@@ -20,15 +20,14 @@ function runBrainProgression()
 
 function BrainProgression()
 {
-    $numStart = rand(NUM_RAND_BEGIN_PROG, NUM_RAND_END_PROG);
-    $increment = rand(INC_RAND_BEGIN_PROG, INC_RAND_END_PROG);
+    $numStart = rand(PROGRESSION_MIN_NUMBER, PROGRESSION_MAX_NUMBER);
+    $step = rand(PROGRESSION_MIN_STEP, PROGRESSION_MAX_STEP);
     $arr = [];
-    $lenght = rand(LEN_RAND_BEGIN_PROG, LEN_RAND_END_PROG);
-    for ($i = 1; $i <= $lenght; $i++) {
-        $arr[] = $numStart += $increment;
-    }
-    $mark = rand(1, $lenght - 1);
-    $correctAnswer = $arr[$mark];
+    $length = rand(PROGRESSION_MIN_LENGTH, PROGRESSION_MAX_LENGTH);
+    $numEnd = $numStart + $step * $length;
+    $arr = range($numStart, $numEnd, $step);
+    $mark = rand(0, count($arr) - 1);
+    $correctAnswer = (string)$arr[$mark];
     $arr[$mark] = "..";
     $question = implode(" ", $arr);
     return [$question, $correctAnswer];

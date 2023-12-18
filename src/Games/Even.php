@@ -4,8 +4,8 @@ namespace App\Games\BrainEven;
 
 use function App\Engine\runGame;
 
-const NUM_RAND_BEGIN_EVEN = 1;
-const NUM_RAND_END_EVEN = 100;
+const MIN_NUMBER = 1;
+const MAX_NUMBER = 100;
 
 function runBrainEven()
 {
@@ -16,7 +16,7 @@ function runBrainEven()
 
 function brainEven()
 {
-    $question = rand(NUM_RAND_BEGIN_EVEN, NUM_RAND_END_EVEN);
+    $question = rand(MIN_NUMBER, MAX_NUMBER);
     $correctAnswer = $question % 2 === 0 ? 'yes' : 'no';
     return [$question, $correctAnswer];
 }

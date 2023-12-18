@@ -2,6 +2,7 @@
 
 namespace App\Engine;
 
+use function App\Cli\greetings;
 use function cli\line;
 use function cli\prompt;
 
@@ -9,16 +10,13 @@ const NUMBER_OF_ROUNDS = 3;
 
 function runGame(string $tutorial, callable $gameLogic)
 {
-    line('Welcome to the Brain Games!');
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
+    $name = greetings();
     line($tutorial);
-    for ($i = 0; $i < NUMBER_OF_ROUNDS;) {
+    for ($i = 0; $i < NUMBER_OF_ROUNDS; $i++) {
         [$question, $correctAnswer] = $gameLogic();
         line("Question: %s", $question);
         $answer = prompt('Your answer: ');
-        if ($answer == $correctAnswer) {
-            $i++;
+        if ($answer === $correctAnswer) {
             line('Correct!');
         } else {
             line("'%s' is wrong answer ;(. Correct answer was '%s'", $answer, $correctAnswer);
