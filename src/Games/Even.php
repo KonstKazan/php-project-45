@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Games\BrainEven;
+namespace App\Games\Even;
 
 use function App\Engine\runGame;
 
@@ -10,13 +10,18 @@ const MAX_NUMBER = 100;
 function runBrainEven()
 {
     $tutorial = 'Answer "yes" if the number is even, otherwise answer "no".';
-    $gameLogic = "App\Games\BrainEven\brainEven";
+    $gameLogic = "App\Games\Even\brainEven";
     runGame($tutorial, $gameLogic);
+}
+
+function evenCheck(int $num)
+{
+    return $num % 2 === 0 ? 'yes' : 'no';
 }
 
 function brainEven()
 {
     $question = rand(MIN_NUMBER, MAX_NUMBER);
-    $correctAnswer = $question % 2 === 0 ? 'yes' : 'no';
+    $correctAnswer = evenCheck($question);
     return [$question, $correctAnswer];
 }

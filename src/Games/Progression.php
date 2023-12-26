@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Games\BrainProgression;
+namespace App\Games\Progression;
 
 use function App\Engine\runGame;
 
@@ -14,21 +14,25 @@ const PROGRESSION_MAX_LENGTH = 10;
 function runBrainProgression()
 {
     $tutorial = 'What number is missing in the progression?';
-    $gameLogic = "App\Games\BrainProgression\brainProgression";
+    $gameLogic = "App\Games\Progression\brainProgression";
     runGame($tutorial, $gameLogic);
 }
 
-function BrainProgression()
+function createProgression(int $numStart, int $step, int $length)
+{
+    $numEnd = $numStart + $step * $length;
+    return range($numStart, $numEnd, $step);
+}
+
+function brainProgression()
 {
     $numStart = rand(PROGRESSION_MIN_NUMBER, PROGRESSION_MAX_NUMBER);
     $step = rand(PROGRESSION_MIN_STEP, PROGRESSION_MAX_STEP);
-    $arr = [];
     $length = rand(PROGRESSION_MIN_LENGTH, PROGRESSION_MAX_LENGTH);
-    $numEnd = $numStart + $step * $length;
-    $arr = range($numStart, $numEnd, $step);
-    $mark = rand(0, count($arr) - 1);
-    $correctAnswer = (string)$arr[$mark];
-    $arr[$mark] = "..";
-    $question = implode(" ", $arr);
+    $progression = createProgression($numStart, $step, $length);
+    $mark = rand(0, count($progression) - 1);
+    $correctAnswer = (string)$progression[$mark];
+    $progression[$mark] = "..";
+    $question = implode(" ", $progression);
     return [$question, $correctAnswer];
 }

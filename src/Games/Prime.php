@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Games\BrainPrime;
+namespace App\Games\Prime;
 
 use function App\Engine\runGame;
 
@@ -10,7 +10,7 @@ const MAX_NUMBER = 3001;
 function runPrimeCheck()
 {
     $tutorial = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    $gameLogic = "App\Games\BrainPrime\brainPrime";
+    $gameLogic = "App\Games\Prime\brainPrime";
     runGame($tutorial, $gameLogic);
 }
 
@@ -27,7 +27,7 @@ function primeCheck(int $number)
     return 'yes';
 }
 
-function BrainPrime()
+function brainPrime()
 {
     $num = rand(MIN_NUMBER, MAX_NUMBER);
     $question = $num;

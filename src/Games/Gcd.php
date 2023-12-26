@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Games\BrainGcd;
+namespace App\Games\Gcd;
 
 use function App\Engine\runGame;
 
@@ -10,7 +10,7 @@ const MAX_NUMBER = 99;
 function runGcd()
 {
     $tutorial = 'Find the greatest common divisor of given numbers.';
-    $gameLogic = "App\Games\BrainGcd\brainGcd";
+    $gameLogic = "App\Games\Gcd\brainGcd";
     runGame($tutorial, $gameLogic);
 }
 
