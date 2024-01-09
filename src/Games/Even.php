@@ -14,14 +14,14 @@ function runBrainEven()
     runGame($tutorial, $gameLogic);
 }
 
-function evenCheck(int $num)
+function isEven(int $num)
 {
-    return $num % 2 === 0 ? 'yes' : 'no';
+    return $num % 2 === 0 ? true : false;
 }
 
 function brainEven()
 {
     $question = rand(MIN_NUMBER, MAX_NUMBER);
-    $correctAnswer = evenCheck($question);
+    $correctAnswer = isEven($question) ? 'yes' : 'no';
     return [$question, $correctAnswer];
 }

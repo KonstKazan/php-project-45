@@ -14,23 +14,23 @@ function runPrimeCheck()
     runGame($tutorial, $gameLogic);
 }
 
-function primeCheck(int $number)
+function isPrime(int $number)
 {
     if ($number === 1) {
-        return 'yes';
+        return false;
     }
     for ($i = 2; $i <= $number / 2; $i++) {
         if ($number % $i === 0) {
-            return 'no';
+            return false;
         }
     }
-    return 'yes';
+    return true;
 }
 
 function brainPrime()
 {
     $num = rand(MIN_NUMBER, MAX_NUMBER);
     $question = $num;
-    $correctAnswer = primeCheck($num);
+    $correctAnswer = isPrime($num) ? 'yes' : 'no';
     return [$question, $correctAnswer];
 }
